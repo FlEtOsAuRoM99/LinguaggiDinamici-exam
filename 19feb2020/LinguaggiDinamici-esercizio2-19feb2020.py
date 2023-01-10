@@ -1,6 +1,6 @@
 
 '''
-Scrivere due funzioni con le seguenti caratteristiche.
+Esercizio 2) Scrivere due funzioni con le seguenti caratteristiche.
 1. La funzione dadi riceve in input parametri keyword, n ed f , con
 i seguenti valori default: n = 2, f = 6. Restituisce il punteg-
 gio ottenuto simulando il lancio di n dadi, ciascuno con f facce
