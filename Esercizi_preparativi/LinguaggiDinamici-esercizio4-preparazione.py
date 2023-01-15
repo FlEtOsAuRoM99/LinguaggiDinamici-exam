@@ -23,12 +23,20 @@ class mystring(str):
         return len(self)-self.vowels()
         
     def words(self):
-        return len(self.split(' '))
-
+        if len(self.split(' ')) > 1:
+            if len(self.split('\n')) > 1:
+                lString = self.split('\n')
+                countWords = 0
+                for words in lString:
+                    for _ in words.strip().split(' '):
+                        if _ != '':
+                            countWords += 1
+        return countWords
+    
     def spaces(self):
         return self.words()-1
 
-l = mystring("Hi, my name is Samuele and I program this code.")
+l = mystring("Hi, my name is Samuele and I program this code. \nstop this\n")
 
 print(l.vowels(), l.consonants(), l.words(), l.spaces())
 
