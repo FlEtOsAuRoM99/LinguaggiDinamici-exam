@@ -20,7 +20,11 @@ class mystring(str):
         return countVowels
 
     def consonants(self):
-        return len(self)-self.vowels()
+        test = 'q_w_r_t_y_p_s_d_f_g_h_j_k_l_z_x_c_v_b_n_m'.split('_')
+        countConsonats = 0
+        for i in test:
+            countConsonats += self.lower().count(i)
+        return countConsonats
         
     def words(self):
 
@@ -45,7 +49,7 @@ print(l.vowels(), l.consonants(), l.words(), l.spaces())
 
 #aggiungo un altro esempio
 
-l = mystring("")
+l = mystring(".")
 
 print(l.vowels(), l.consonants(), l.words(), l.spaces())
 
