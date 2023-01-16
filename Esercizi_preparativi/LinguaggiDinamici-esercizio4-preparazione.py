@@ -25,7 +25,7 @@ class mystring(str):
     def words(self):
 
         countWords = 0
-        if len(self.split(' ')) > 0:
+        if len(self.split(' ')) > 1:
             for words in self.split('\n'):
                 for singleLine in words.strip().split('\t'):
                         for _ in singleLine.strip().split(' '):
