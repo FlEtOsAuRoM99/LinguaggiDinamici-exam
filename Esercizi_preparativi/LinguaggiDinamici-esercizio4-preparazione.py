@@ -23,21 +23,29 @@ class mystring(str):
         return len(self)-self.vowels()
         
     def words(self):
-        if len(self.split(' ')) > 1:
-            if len(self.split('\n')) > 1:
-                lString = self.split('\n')
-                countWords = 0
-                for words in lString:
-                    for _ in words.strip().split(' '):
-                        if _ != '':
-                            countWords += 1
+
+        countWords = 0
+        if len(self.split(' ')) > 0:
+            for words in self.split('\n'):
+                for singleLine in words.strip().split('\t'):
+                        for _ in singleLine.strip().split(' '):
+                            if _ != '':
+                                countWords += 1
         return countWords
     
     def spaces(self):
+        '''
+        se è -1 significa che non esiste alcuna parola
+        '''
         return self.words()-1
 
-l = mystring("Hi, my name is Samuele and I program this code. \nstop this\n")
+l = mystring("Hi, my name is Samuele and I program\tthis code. \nstop this\n")
 
 print(l.vowels(), l.consonants(), l.words(), l.spaces())
 
+#aggiungo un altro esempio
+
+l = mystring("")
+
+print(l.vowels(), l.consonants(), l.words(), l.spaces())
 
