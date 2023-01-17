@@ -29,7 +29,7 @@ class gradi():
         return ((((self.s/60)+self.p)/60)+self.g)*(math.pi/180)
     
     def __str__(self):
-        return f"{self.g}\xb0 {self.p}’ {self.s}’’"
+        return f"{self.g}\xb0 {self.p}' {self.s}''"
     
 v = gradi(40,12,25)
 print(v.rad)
