@@ -1,2 +1,2 @@
 # LinguaggiDinamici-exam
-All exercises to prepare for the exam
+All exercises to prepare the exam
